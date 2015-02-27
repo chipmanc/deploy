@@ -33,6 +33,8 @@ roles:
     - names:
       - admin
 
+# Admin user gets created seperately because he needs to be admin 
+# of the admin tenant as well.
 admin:
   keystone.user_present:
     - email: admin@company.com
@@ -70,7 +72,3 @@ admin:
     - adminurl: {{ data['adminurl'] }}
     - region: {{ data['region'] }}
 {% endfor %}
-
-
-
-

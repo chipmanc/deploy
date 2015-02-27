@@ -3,15 +3,28 @@ prod:
     - common
     - openstack
 
-  'role:keystone':
-    - match: grain
-    - keystone
-
-  'role:keystone-db':
+  'role:glance-db':
     - match: grain
     - database
-    - keystone-db
+    - database.glance
 
   'role:glance':
     - match: grain
     - glance
+
+  'role:keystone-db':
+    - match: grain
+    - database
+    - database.keystone
+
+  'role:keystone':
+    - match: grain
+    - keystone
+
+  'role:nova-db':
+    - match: grain
+    - database.nova
+
+  'role:nova-api':
+    - match: grain
+    - nova.api
