@@ -1,0 +1,1 @@
+cinder_rabbit_pass: Gooboh9R
