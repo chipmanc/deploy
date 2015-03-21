@@ -1,1 +1,0 @@
-glance_db_pass: lks98DSN32sl
