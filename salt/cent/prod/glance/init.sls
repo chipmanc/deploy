@@ -3,5 +3,4 @@ glance:
     - names:
       - openstack-glance
       - python-glanceclient
-    - require:
-      - pkg: openstack
+      - openstack-selinux

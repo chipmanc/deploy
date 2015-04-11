@@ -1,11 +1,8 @@
 cent-prod:
-  '*':
-    - common
-
   '*db':
     - database
 
-  '*rabbit':
+  '*rabbit*':
     - rabbit
 
   'roles:nova-rabbit':
@@ -58,6 +55,14 @@ cent-prod:
     - match: grain
     - nova.api
 
+  'roles:nova-conductor':
+    - match: grain
+    - nova.conductor
+
   'roles:nova-compute':
     - match: grain
     - nova.compute
+
+  'roles:nova-scheduler':
+    - match: grain
+    - nova.scheduler

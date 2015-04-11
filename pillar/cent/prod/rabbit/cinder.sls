@@ -1,1 +1,1 @@
-cinder_rabbit_pass: Gooboh9R
+cinder_rabbit_password: Gooboh9R

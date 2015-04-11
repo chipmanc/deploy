@@ -1,1 +1,1 @@
-neutron_rabbit_pass: Waejai5u
+neutron_rabbit_password: Waejai5u

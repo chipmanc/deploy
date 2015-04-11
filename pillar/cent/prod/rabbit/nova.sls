@@ -1,1 +1,1 @@
-nova_rabbit_pass: Shoh8eeZ
+nova_rabbit_password: Shoh8eeZ

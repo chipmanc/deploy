@@ -1,20 +1,18 @@
-nova-compute:
+nova-conductor:
   pkg.installed:
     - names:
-      - openstack-nova-compute
-      - sysfsutils
+      - openstack-nova-conductor
+      - python-cinderclient
   service.running:
     - enable: True
-    - names:
-      - openstack-nova-compute
-      - libvirtd
+    - name: openstack-nova-conductor
     - watch:
       - file: /etc/nova/nova.conf
-      - pkg: openstack-nova-compute
+      - pkg: openstack-nova-conductor
   file.managed:
     - name: /etc/nova/nova.conf
     - source: salt://nova/nova.conf
     - template: jinja
     - require:
-      - pkg: openstack-nova-compute
+      - pkg: openstack-nova-conductor
 

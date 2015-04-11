@@ -1,10 +1,9 @@
 keystone:
   pkg.installed:
     - names:
+      - openstack-selinux
       - openstack-keystone
       - python-keystoneclient
-    - require:
-      - pkg: openstack
   service.running:
     - enable: True
     - name: openstack-keystone
@@ -88,5 +87,14 @@ glance_endpoint_present:
     - internalurl: http://{{ salt['mine.get']('roles:glance-api', 'mnet_ip_addrs', expr_form='grain')['glance'][0] }}:9292
     - adminurl: http://{{ salt['mine.get']('roles:glance-api', 'mnet_ip_addrs', expr_form='grain')['glance'][0] }}:9292
     - region: GVL
+
+nova_endpoint_present:
+  keystone.endpoint_present:
+    - name: nova
+    - publicurl: http://nova-api.gvl.chrischipman.com:8774/v2/%(tenant_id)s
+    - internalurl: http://{{ salt['mine.get']('roles:nova-api', 'mnet_ip_addrs', expr_form='grain')['nova-api.ManagementNet'][0] }}:8774/v2/%(tenant_id)s
+    - adminurl: http://{{ salt['mine.get']('roles:nova-api', 'mnet_ip_addrs', expr_form='grain')['nova-api.ManagementNet'][0] }}:8774/v2/%(tenant_id)s
+    - region: GVL
+
 
 

@@ -6,3 +6,4 @@ nova_rabbit:
     - name: nova
     - owner: nova
 
+

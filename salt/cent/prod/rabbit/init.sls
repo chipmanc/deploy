@@ -1,7 +1,6 @@
 rabbitmq-server:
-  pkg.installed: 
-    - require:
-      - pkg: openstack-selinux
+  pkg:
+    - installed
   service.running:
     - enable: True
     - reload: True
@@ -10,3 +9,4 @@ rabbitmq-server:
     - require_in:
       - cinder_rabbit 
       - nova_rabbit
+      - neutron_rabbit

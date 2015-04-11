@@ -3,8 +3,6 @@ nova-api:
     - names:
       - openstack-nova-api
       - python-novaclient
-    - require:
-      - pkg: openstack
   service.running:
     - enable: True
     - name: openstack-nova-api
