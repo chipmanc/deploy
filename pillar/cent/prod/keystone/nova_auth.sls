@@ -1,1 +1,0 @@
-nova: thaiGh9a
