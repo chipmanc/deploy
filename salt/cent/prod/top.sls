@@ -1,5 +1,5 @@
 cent-prod:
-  '*db':
+  'G@roles:*db':
     - database
 
   '*rabbit*':

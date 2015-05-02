@@ -3,6 +3,7 @@ mariadb-server:
     - installed
     - pkgs:
       - mariadb-server
+      - MySQL-python
   service.running:
     - enable: True
     - reload: True
