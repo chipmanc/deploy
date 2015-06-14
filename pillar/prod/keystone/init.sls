@@ -18,7 +18,7 @@ mine_functions:
     cidr: 10.0.0.0/16
 
 keystone.token: paeGh9ch
-keystone.endpoint: http://192.168.10.228:35357/v2.0
+keystone.endpoint: http://intra-keystone.chrischipman.com:35357/v2.0
 
 keystone_admin_pass: sld9S89Lvbw
 
@@ -30,3 +30,13 @@ services:
   glance: image
   keystone: identity
 
+endpoints:
+  keystone:
+    port: 5000
+    admin_port: 35357
+  glance:
+    port: 9292
+    admin_port: 9292
+  nova:
+    port: 8774
+    admin_port: 8774

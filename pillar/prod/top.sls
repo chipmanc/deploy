@@ -1,4 +1,7 @@
-cent-prod:
+prod:
+  'roles:*db':
+    - match: grain
+    - database
 
   'roles:nova-rabbit':
     - match: grain
@@ -17,27 +20,22 @@ cent-prod:
 
   'roles:nova-db':
     - match: grain
-    - database
     - database.nova
 
   'roles:keystone-db':
     - match: grain
-    - database
     - database.keystone
 
   'roles:glance-db':
     - match: grain
-    - database
     - database.glance
 
   'roles:neutron-db':
     - match: grain
-    - database
     - database.neutron
 
   'roles:cinder-db':
     - match: grain
-    - database
     - database.cinder
 
   'roles:keystone':

@@ -6,6 +6,7 @@ mariadb-server:
       - MySQL-python
   service.running:
     - enable: True
+    - name: mariadb
     - reload: True
     - name: mariadb
   mysql_user:

@@ -2,6 +2,7 @@ nova-scheduler:
   pkg.installed:
     - names:
       - openstack-nova-scheduler
+      - python-cinderclient
   service.running:
     - enable: True
     - name: openstack-nova-scheduler

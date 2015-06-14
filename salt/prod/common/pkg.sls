@@ -1,0 +1,2 @@
+update:
+  pkg.uptodate
