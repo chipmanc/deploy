@@ -21,3 +21,4 @@ nova-api:
       - pkg: openstack-nova-api
     - require:
       - file: /etc/nova/nova.conf
+
