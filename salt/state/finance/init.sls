@@ -28,7 +28,7 @@ base_setup:
     - index_url: https://testpypi.python.org/pypi
     - name: django-stocks
     - watch_in:
-      - uwsgi
+      - service: uwsgi
   cmd.run:
     - name: |
         source /srv/finance/bin/activate
