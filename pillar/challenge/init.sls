@@ -1,1 +1,1 @@
-django_user_password: BU11shit**
+django_user_password: "aA1!bB2@cC3#"

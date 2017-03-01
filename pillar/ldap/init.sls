@@ -1,7 +1,7 @@
 include:
   - ldap.iptables
 
-root_dn_password: "ro27QXot--"
+root_dn_password: "aA1!bB2@cC3#"
 
 basedn:
   name: dc=chrischipman,dc=com
@@ -16,7 +16,7 @@ accounts:
     objectClass: [inetOrgPerson, posixAccount, shadowAccount]
     loginShell: /bin/bash
     homeDirectory: /home/chrichip
-    userPassword: "ro27QXot--"
+    userPassword: "aA1!bB2@cC3#"
     uidNumber: 1001
     gidNumber: 1001
     sn: Chipman
@@ -26,7 +26,7 @@ accounts:
     objectClass: [inetOrgPerson, posixAccount]
     loginShell: /bin/bash
     homeDirectory: /srv/gerrit/gerrit
-    userPassword: "ro27QXot--"
+    userPassword: "aA1!bB2@cC3#"
     uidNumber: 1002
     gidNumber: 1002
     sn: admin
@@ -36,7 +36,7 @@ accounts:
     objectClass: [inetOrgPerson, posixAccount]
     loginShell: /bin/bash
     homeDirectory: /var/lib/jenkins
-    userPassword: "ro27QXot--"
+    userPassword: "aA1!bB2@cC3#"
     uidNumber: 1003
     gidNumber: 1003
     sn: admin
