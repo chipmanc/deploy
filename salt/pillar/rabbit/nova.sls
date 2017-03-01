@@ -1,1 +1,0 @@
-nova_rabbit_password: Shoh8eeZ
