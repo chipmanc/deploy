@@ -1,0 +1,18 @@
+[Unit]
+Description=Celery Financial App
+After=network.target
+
+[Service]
+Type=simple
+User=finance
+Group=finance
+Environment="VENVDIR=/srv/finance"
+WorkingDirectory=/srv/finance/finance
+ExecStart=/srv/finance/bin/celery -A django_stocks worker -l INFO
+
+# Give a reasonable amount of time for the server to start up/shut down
+TimeoutSec=20
+
+[Install]
+WantedBy=multi-user.target
+
